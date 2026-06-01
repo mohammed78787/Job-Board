@@ -4,7 +4,6 @@ import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import HomeCards from './components/HomeCards'
 import JobListings from './components/JobListings'
-import ViewAllJobs from './components/ViewAllJobs'
 import NotFound from './components/NotFound'
 import AddJob from './pages/AddJob'
 import Job from './components/Job'
@@ -26,10 +25,9 @@ function App() {
             <Hero />
             <StatsBar/>
             <HowItWorks/>
-            <HomeCards />
             <JobListings isHome={true} />
+            <HomeCards />
             <Testimonials/>
-            <ViewAllJobs />
           </>
         } />
         <Route path="/jobs" element={<JobListings />} />

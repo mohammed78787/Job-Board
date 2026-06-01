@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react"
 import JobCard from "./JobCard"
 import { getJobs } from "../utils/jobStorage"
+import ViewAllJobs from "./ViewAllJobs"
 
 function JobListings({ isHome = false }) {
   const [jobs, setJobs] = useState([])
@@ -22,6 +23,7 @@ function JobListings({ isHome = false }) {
           ))}
         </div>
       </div>
+      <ViewAllJobs></ViewAllJobs>
     </section>
   )
 }
