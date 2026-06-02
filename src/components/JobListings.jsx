@@ -23,7 +23,7 @@ function JobListings({ isHome = false }) {
           ))}
         </div>
       </div>
-      <ViewAllJobs></ViewAllJobs>
+      <ViewAllJobs isHome={isHome} />
     </section>
   )
 }

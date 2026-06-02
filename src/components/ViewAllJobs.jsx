@@ -1,6 +1,9 @@
 import { Link } from "react-router-dom"
 
-function ViewAllJobs() {
+function ViewAllJobs({ isHome }) {
+  if (!isHome) {
+    return null
+  }
   return (
 
     <section className="m-auto max-w-lg my-10 px-6 bg-indigo-50">
