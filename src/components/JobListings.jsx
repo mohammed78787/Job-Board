@@ -10,6 +10,7 @@ function JobListings({ isHome = false }) {
     const allJobs = getJobs()
     setJobs(isHome ? allJobs.slice(0, 3) : allJobs)
   }, [isHome])
+  
 
   return (
     <section className="bg-blue-50 px-4 py-10">

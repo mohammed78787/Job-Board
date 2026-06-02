@@ -1,6 +1,7 @@
 import { useNavigate, useParams, Link } from "react-router-dom"
 import { FaArrowLeft, FaMapMarker } from "react-icons/fa"
 import { getJobById, deleteJob } from "../utils/jobStorage"
+import { useEffect } from "react"
 
 function Job() {
   const { id } = useParams()
@@ -10,6 +11,9 @@ function Job() {
   if (!job) {
     return <h1 className="text-center mt-10 text-2xl">Job not found.</h1>
   }
+      useEffect(() => {
+      window.scrollTo(0, 0);
+    }, []);
 
   const onDeleteClick = (jobId) => {
     const confirm = window.confirm("Are you sure you want to delete this job?")

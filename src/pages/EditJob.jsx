@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useState,useEffect } from "react"
 import { useParams, useNavigate } from "react-router-dom"
 import { getJobById, updateJob } from "../utils/jobStorage"
 
@@ -6,6 +6,9 @@ function EditJob() {
   const { id } = useParams()
   const navigate = useNavigate()
   const job = getJobById(id)
+    useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   const [type, setType] = useState(job?.type || "Full-Time")
   const [title, setTitle] = useState(job?.title || "")
